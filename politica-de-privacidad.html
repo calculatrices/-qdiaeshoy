@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad y Contacto - Qué día es hoy</title>
+    <meta name="description" content="Política de privacidad y formulario de contacto para el sitio web Qué día es hoy.">
+    <meta name="keywords" content="política de privacidad, contacto, formulario de contacto, privacidad, GDPR, LOPD">
+    <link rel="canonical" href="https://qdiaeshoy.com/politica-de-privacidad.html" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/Qué día es hoy.png" type="image/png">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="5"></circle>
+                <line x1="50" y1="50" x2="50" y2="20" stroke="white" stroke-width="5"></line>
+                <line x1="50" y1="50" x2="70" y2="50" stroke="white" stroke-width="5"></line>
+            </svg>
+            <h1 style="text-align: center;">Qué día es hoy</h1>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="/" class="nav-link">Hogar</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Calculadoras</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/calculadora-de-edad.html" class="dropdown-link">Calculadora de Edad</a></li>
+                    <li><a href="/diferencia-entre-dos-fechas.html" class="dropdown-link">Diferencia entre Dos Fechas</a></li>
+                    <li><a href="/fecha-de-jubilacion-estimada.html" class="dropdown-link">Fecha de Jubilación Estimada</a></li>
+                    <li><a href="/cuenta-atras.html" class="dropdown-link">Cuenta Atrás</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Fecha de Hoy</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/fecha-de-ayer.html" class="dropdown-link">Fecha de Ayer</a></li>
+                    <li><a href="/fecha-de-manana.html" class="dropdown-link">Fecha de Mañana</a></li>
+                    <li><a href="/hora-actual.html" class="dropdown-link">Hora Actual</a></li>
+                    <li><a href="/dias-restantes-del-ano.html" class="dropdown-link">Días Restantes del Año</a></li>
+                    <li><a href="/dias-de-la_semana.html" class="dropdown-link">Días de la Semana</a></li>
+                    <li><a href="/cuantos-dias-tiene-un-mes.html" class="dropdown-link">¿Cuántos Días Tiene un Mes?</a></li>
+                    <li><a href="/proximo-ano-bisiesto.html" class="dropdown-link">Próximo Año Bisiesto</a></li>
+                    <li><a href="/numero-de-semana.html" class="dropdown-link">Número de Semana</a></li>
+                    <li><a href="/calendario-anual.class" class="dropdown-link">Calendario Anual</a></li>
+                    <li><a href="/dias-feriados.html" class="dropdown-link">Días Feriados</a></li>
+                </ul>
+            </li>
+            <li><a href="/politica-de-privacidad.html" class="nav-link">Política de Privacidad y Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+        <div class="card">
+            <h2>Política de Privacidad</h2>
+            <p>
+                En <strong>Qué día es hoy</strong>, la privacidad de nuestros visitantes es de suma importancia.
+                Este documento de política de privacidad describe en detalle los tipos de información personal que se
+                recopilan y registran en qdiaeshoy.com y cómo la utilizamos.
+            </p>
+            <p>
+                <strong>Qué día es hoy</strong> cumple con todas las leyes y regulaciones aplicables en materia de
+                privacidad, incluyendo el Reglamento General de Protección de Datos (GDPR) y la Ley Orgánica de
+                Protección de Datos y Garantía de los Derechos Digitales (LOPD).
+            </p>
+
+            <h3>Información que Recopilamos</h3>
+            <p>
+                Recopilamos información limitada no personal, como el tipo de navegador, el idioma preferido, el sitio web
+                de referencia y la fecha y hora de cada solicitud de visitante. Esto nos ayuda a entender mejor cómo
+                nuestros visitantes utilizan el sitio.
+            </p>
+
+            <h3>Uso de Cookies</h3>
+            <p>
+                Nuestro sitio web utiliza cookies para mejorar la experiencia del usuario. Puede configurar su navegador
+                para que rechace todas las cookies o para que le avise cuando se envíe una cookie.
+            </p>
+
+            <h2>Formulario de Contacto</h2>
+            <p>
+                Si tiene alguna pregunta o conciernente sobre nuestra política de privacidad, o si desea ejercer sus
+                derechos de acceso, rectificación, cancelación u oposición, puede ponerse en contacto con nosotros a
+                través del siguiente formulario:
+            </p>
+
+            <form action="#" method="post">
+                <div class="input-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="calc-button">Enviar Mensaje</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 quediaeshoy. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-list').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,512 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qué día es hoy: la fecha de hoy y la hora actual.</title>
+    <meta http-equiv="Content-Language" content="es" />
+    <meta name="description" content="Descubre qué día es hoy y la fecha actual en el calendario, incluyendo el día, mes y año." />
+    <meta name="keywords"
+        content="qué días es hoy, en q año estamos, fecha de hoy, qué fecha es hoy, q días es hoy, fecha hoy, en q año estamos, q año estamos, que días es hoy, hoy q dia es" />
+    <link rel="canonical" href="https://qdiaeshoy.com/" />
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/Qué día es hoy.png" type="image/png">
+
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.1/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Qué día es hoy: la fecha de hoy y la hora actual.",
+      "description": "Descubre qué día es hoy y la fecha actual en el calendario, incluyendo el día, mes y año.",
+      "url": "https://qdiaeshoy.com/",
+      "datePublished": "2024-01-01",
+      "dateModified": "2025-01-01",
+      "author": {
+        "@type": "Organization",
+        "name": "quediaeshoy"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://qdiaeshoy.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="5"></circle>
+                <line x1="50" y1="50" x2="50" y2="20" stroke="white" stroke-width="5"></line>
+                <line x1="50" y1="50" x2="70" y2="50" stroke="white" stroke-width="5"></line>
+            </svg>
+            <h1 style="text-align: center;">Qué día es hoy</h1>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="https://qdiaeshoy.com/" class="nav-link">Hogar</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Calculadoras</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/calculadora-de-edad.html" class="dropdown-link">Calculadora de Edad</a></li>
+                    <li><a href="/diferencia-entre-dos-fechas.html" class="dropdown-link">Diferencia entre Dos Fechas</a></li>
+                    <li><a href="/fecha-de-jubilacion-estimada.html" class="dropdown-link">Fecha de Jubilación Estimada</a></li>
+                    <li><a href="/cuenta-atras.html" class="dropdown-link">Cuenta Atrás</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Fecha de Hoy</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/fecha-de-ayer.html" class="dropdown-link">Fecha de Ayer</a></li>
+                    <li><a href="/fecha-de-manana.html" class="dropdown-link">Fecha de Mañana</a></li>
+                    <li><a href="/hora-actual.html" class="dropdown-link">Hora Actual</a></li>
+                    <li><a href="/dias-restantes-del-ano.html" class="dropdown-link">Días Restantes del Año</a></li>
+                    <li><a href="/dias-de-la-semana.html" class="dropdown-link">Días de la Semana</a></li>
+                    <li><a href="/cuantos-dias-tiene-un-mes.html" class="dropdown-link">¿Cuántos Días Tiene un Mes?</a></li>
+                    <li><a href="/proximo-ano-bisiesto.html" class="dropdown-link">Próximo Año Bisiesto</a></li>
+                    <li><a href="/numero-de-semana.html" class="dropdown-link">Número de Semana</a></li>
+                    <li><a href="/calendario-anual.html" class="dropdown-link">Calendario Anual</a></li>
+                    <li><a href="/dias-feriados.html" class="dropdown-link">Días Feriados</a></li>
+                </ul>
+            </li>
+            <li><a href="/politica-de-privacidad.html" class="nav-link">Política de Privacidad y
+                    Contacto</a></li>
+        </ul>
+    </nav>
+<script async="async" data-cfasync="false" src="//pl27053466.profitableratecpm.com/7128d6477cca92be09b3d598aac4dd4b/invoke.js"></script>
+<div id="container-7128d6477cca92be09b3d598aac4dd4b"></div>
+    <main class="main">
+        <!-- Modified Grid Layout -->
+        <div class="card"
+            style="background: linear-gradient(45deg, #f6f8ff, #ffffff); transition: background 0.5s ease; animation: cardBackground 10s infinite alternate; grid-column: 1 / -1;">
+            <h2>Qué día es hoy</h2>
+            <div class="current-time" id="current-time"></div>
+        </div>
+
+        <div class="card"
+            style="background: linear-gradient(45deg, #f6f8ff, #ffffff); transition: background 0.5s ease; animation: cardBackground 10s infinite alternate; grid-column: 1 / -1;">
+            <h2>Hoy es</h2>
+            <div class="current-time" id="today-day-of-week"></div>
+        </div>
+
+        <div class="card"
+            style="background: linear-gradient(135deg, #e0e4ff, #ffffff); animation: cardGradient 10s ease infinite; grid-column: 1 / -1;">
+            <h2>Calendario</h2>
+            <table class="calendar" id="calendar">
+                <tbody>
+                    <tr>
+
+                    </tr>
+                    <tr>
+                        <th>Dom</th>
+                        <th>Lun</th>
+                        <th>Mar</th>
+                        <th>Mié</th>
+                        <th>Jue</th>
+                        <th>Vie</th>
+                        <th>Sáb</th>
+                    </tr>
+                    <tr>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Add the new image card here -->
+        
+        <div class="card homepage-image-card" style="grid-column: 1 / -1;">
+            <img src="/world_map.png" alt="Mapa del mundo" class="homepage-image">
+            <p>Explora el tiempo en diferentes partes del mundo con nuestro mapa interactivo.</p>
+        </div>
+
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>Festivos Nacionales en España – Año 2025</h2>
+            <p>
+                Aquí te presentamos un listado de los días festivos nacionales en España para el año 2025.
+                Estos días son clave para la planificación personal y laboral, y te ayudarán a saber cuándo
+                puedes disfrutar de un merecido descanso.
+            </p>
+            <ul class="holiday-list">
+                <li class="holiday-item">
+                    <strong>1 de enero: Año Nuevo</strong>
+                    <span class="date">Miércoles, 1 de enero de 2025</span>
+                    <p>Celebración universal del inicio de un nuevo año.</p>
+                </li>
+                <li class="holiday-item">
+                    <strong>6 de enero: Día de Reyes / Epifanía del Señor</strong>
+                    <span class="date">Lunes, 6 de enero de 2025</span>
+                    <p>Conmemoración de la llegada de los Reyes Magos a Belén.</p>
+                </li>
+                <li class="holiday-item">
+                    <strong>17 de abril: Jueves Santo</strong>
+                    <span class="date">Jueves, 17 de abril de 2025</span>
+                    <p>Conmemoración de la Última Cena de Jesús con sus apóstoles.</p>
+                </li>
+                <li class="holiday-item">
+                    <strong>18 de abril: Viernes Santo</strong>
+                    <span class="date">Viernes, 18 de abril de 2025</span>
+                    <p>Conmemoración de la crucifixión y muerte de Jesús.</p>
+                </li>
+                <li class="holiday-item">
+                    <strong>1 de mayo: Día del Trabajo</strong>
+                    <span class="date">Jueves, 1 de mayo de 2025</span>
+                    <p>Celebración internacional de los derechos laborales.</p>
+                </li>
+                <li class="holiday-item">
+                    <strong>15 de agosto: Asunción de la Virgen</strong>
+                    <span class="date">Viernes, 15 de agosto de 2025</span>
+                    <p>Festividad religiosa que celebra la asunción del cuerpo y alma de la Virgen María al cielo.</p>
+                </li>
+                <li class="holiday-item">
+                    <strong>12 de octubre: Fiesta Nacional de España</strong>
+                    <span class="date">Domingo, 12 de octubre de 2025</span>
+                    <p>Conmemoración del Descubrimiento de América y el Día de la Hispanidad.</p>
+                </li>
+                <li class="holiday-item">
+                    <strong>1 de noviembre: Día de Todos los Santos</strong>
+                    <span class="date">Sábado, 1 de noviembre de 2025</span>
+                    <p>Día para honrar a los difuntos.</p>
+                </li>
+                <li class="holiday-item">
+                    <strong>6 de diciembre: Día de la Constitución Española</strong>
+                    <span class="date">Sábado, 6 de diciembre de 2025</span>
+                    <p>Conmemoración de la aprobación de la Constitución Española de 1978.</p>
+                </li>
+                <li class="holiday-item">
+                    <strong>8 de diciembre: Inmaculada Concepción</strong>
+                    <span class="date">Lunes, 8 de diciembre de 2025</span>
+                    <p>Festividad religiosa en honor a la Inmaculada Concepción de la Virgen María.</p>
+                </li>
+                <li class="holiday-item">
+                    <strong>25 de diciembre: Navidad</strong>
+                    <span class="date">Jueves, 25 de diciembre de 2025</span>
+                    <p>Celebración del nacimiento de Jesucristo.</p>
+                </li>
+            </ul>
+        </div>
+<script async="async" data-cfasync="false" src="//pl27053466.profitableratecpm.com/7128d6477cca92be09b3d598aac4dd4b/invoke.js"></script>
+<div id="container-7128d6477cca92be09b3d598aac4dd4b"></div>
+        <div class="card" style="grid-column: 1 / -1;">
+            <p>¿Está buscando respuestas rápidas a preguntas como "¿Qué día es hoy?", "¿Qué fecha es hoy?" o ​​"¿En qué año
+            estamos?" ¡Este es el lugar indicado para usted! Nuestro calendario de fechas avanzado es la mejor manera de
+            averiguar qué día es hoy. Puede identificar fácilmente qué día de la semana es hoy. Proporciona información
+            rápida y exacta sobre la fecha actual, el día de la semana e incluso el año actual. Por lo tanto, si desea
+            saber su día o simplemente siente curiosidad por el calendario, lo tenemos cubierto.</br>
+            </br>
+            <h2>Acerca de nosotros</h2>
+            Con nuestro buscador de fechas avanzado, comprendemos la importancia del seguimiento de la fecha y la hora. El
+            buscador de fechas le ayuda a encontrar las respuestas que necesita con solo un clic. Desde determinar "en qué
+            día estamos hoy" hasta encontrar la "fecha de hoy", nuestro calendario está aquí para garantizar que siempre
+            esté sincronizado con su calendario.</br>
+            </br>
+            <h2>¿Por qué elegirnos?</h2>
+            <li>Rápido y preciso: respuestas en tiempo real para la fecha de hoy y qué día de la semana es el día de hoy.
+            </li>
+            <li>FÁCIL DE USAR: cree una consulta para acceder rápidamente y en cualquier lugar a la información de la fecha
+                exacta.</li>
+            <li>Fiable: los datos correctos se actualizan continuamente, por lo que nunca tendrá que preguntarse "qué día es
+                hoy.</li>.</p>
+            <!-- More holidays -->
+        </div>
+
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>Preguntas frecuentes</h2>
+            <div class="faq-container">
+                <details class="faq-item">
+                    <summary>¿Qué día es hoy?</summary>
+                    <p>Puede consultar fácilmente la parte superior de nuestra página de inicio para saber "qué día de la
+                        semana es hoy". Nuestra configuración avanzada muestra esta información de forma clara para
+                        mantenerlo informado.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Qué fecha es hoy?</summary>
+                    <p>La fecha que estás buscando se muestra en la página principal, por lo que nunca tendrás que
+                        preguntarte "¿qué día de la semana es hoy?.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿En qué año estamos?</summary>
+                    <p>Puedes ver fácilmente la fecha del año actual que se muestra de forma destacada en nuestro sitio para
+                        un fácil acceso cuando quieras abrirlo.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Cómo puedo saber qué día de la semana es?</summary>
+                    <p>Con nuestra página de inicio avanzada, puede averiguar fácilmente 'qué día es hoy' sin ningún
+                        problema.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Cómo sé si hoy es fin de semana o día laborable?</summary>
+                    <p>Es sencillo, creamos uno claro que indica si hoy es fin de semana o día de semana, para que puedas
+                        planificar en consecuencia.</p>
+                </details>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Facebook Like Button -->
+    <div class="fb-like" data-href="https://qdiaeshoy.com/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true" style="margin: 20px auto; text-align: center; display: block;"></div>
+
+    <footer class="footer">
+        <p> 2025 quediaeshoy. Todos los derechos reservados.</p>
+   <a href="https://whatistodaydate.com/" style="color: white;">Today Date</a> -
+  <a href="https://calculer-m2.ovh/" style="color: white;">Calculer m2</a> -
+  <a href="https://calculadorasonline.net/" style="color: white;">Calculadoras Online</a> -
+  <a href="https://calcul-au-m2.ovh/" style="color: white;">Calculer une Surface</a> -
+  <a href="https://calcule-en-m2.ovh/" style="color: white;">Calcule en m2</a> -
+  <a href="https://calculer-le-m2.ovh/" style="color: white;">Calculer le m2</a> -
+  <a href="https://calculatrice.ovh/" style="color: white;">Calculatrice</a>
+    </footer>
+
+    <button class="dark-mode-toggle" id="darkModeToggle">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path
+                d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75zM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0zm11.394 5.834a.75.75 0 0 1-.082 1.06l-1.591 1.591a.75.75 0 1 1-1.06-1.06l1.591-1.591a.75.75 0 0 1 1.06.082z">
+            </path>
+        </svg>
+    </button>
+
+    <script>
+        // Load the Facebook SDK asynchronously
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.0"; // Use v3.0 for wider compatibility
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        // Current Time
+        function updateTime() {
+            const now = luxon.DateTime.local();
+            document.getElementById('current-time').textContent = now.setLocale('es').toLocaleString(luxon.DateTime.DATETIME_FULL);
+            document.getElementById('today-day-of-week').textContent = now.setLocale('es').toLocaleString({ weekday: 'long' }).charAt(0).toUpperCase() + now.setLocale('es').toLocaleString({ weekday: 'long' }).slice(1);
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Enhanced Calendar
+        function generateCalendar() {
+            const now = luxon.DateTime.local();
+            const daysInMonth = now.daysInMonth;
+            const firstDay = now.startOf('month').weekday;
+            const currentDay = now.day;
+
+            // Define holidays for the current year (example for 2025, adjust as needed)
+            const holidays = {
+                '2025-01-01': 'Día de Año Nuevo',
+                '2025-01-06': 'Día de Reyes',
+                '2025-04-18': 'Viernes Santo',
+                '2025-04-20': 'Domingo de Resurrección',
+                '2025-05-01': 'Día del Trabajo',
+                '2025-08-15': 'Asunción de la Virgen',
+                '2025-10-12': 'Día de la Hispanidad',
+                '2025-11-01': 'Día de Todos los Santos',
+                '2025-12-06': 'Día de la Constitución Española',
+                '2025-12-08': 'Inmaculada Concepción',
+                '2025-12-25': 'Navidad'
+            };
+
+            let calendarHTML = `
+    <tr>
+      <th>Dom</th><th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th>Sáb</th>
+    </tr>
+  `;
+
+            let day = 1;
+            let calendar = [];
+
+            for (let i = 0; i < 6; i++) {
+                let row = [];
+                for (let j = 0; j < 7; j++) {
+                    if (i === 0 && j < firstDay - 1) { // Adjust for Sunday being first day of week in Luxon
+                        row.push('');
+                    } else if (day > daysInMonth) {
+                        row.push('');
+                    } else {
+                        const isToday = day === currentDay;
+                        const dateKey = `${now.year}-${String(now.month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                        const isHoliday = holidays[dateKey] ? true : false;
+                        row.push({
+                            day,
+                            isToday,
+                            isHoliday
+                        });
+                        day++;
+                    }
+                }
+                calendar.push(row);
+            }
+
+            calendar.forEach(week => {
+                calendarHTML += '<tr>';
+                week.forEach(cell => {
+                    if (typeof cell === 'object') {
+                        let classes = [];
+                        if (cell.isToday) classes.push('today');
+                        if (cell.isHoliday) classes.push('holiday');
+                        calendarHTML += `<td class="${classes.join(' ')}">${cell.day}</td>`;
+                    } else {
+                        calendarHTML += `<td>${cell}</td>`;
+                    }
+                });
+                calendarHTML += '</tr>';
+            });
+
+            document.getElementById('calendar').innerHTML = calendarHTML;
+        }
+
+        // Initialize all functions
+        document.addEventListener('DOMContentLoaded', () => {
+            updateTime();
+            generateCalendar();
+         });
+
+        // Mobile Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-list').classList.toggle('active');
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        });
+
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+        }
+
+        // Enhanced Calendar Interaction
+        document.querySelector('.calendar').addEventListener('click', (e) => {
+            if (e.target.tagName === 'TD' && e.target.textContent) {
+                document.querySelectorAll('.calendar td').forEach(td => td.classList.remove('selected'));
+                e.target.classList.add('selected');
+
+                // Show events for selected date
+                const date = new Date();
+                date.setDate(parseInt(e.target.textContent));
+                showEventsForDate(date);
+            }
+        });
+
+        function showEventsForDate(date) {
+            const formattedDate = luxon.DateTime.fromJSDate(date).toLocaleString();
+            // This function would typically fetch events from a database or a more comprehensive list.
+            // For now, it uses a simplified hardcoded list or indicates no events.
+            const now = luxon.DateTime.local();
+            const dateKey = `${now.year}-${String(now.month).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+
+            const holidays = {
+                '2025-01-01': 'Día de Año Nuevo',
+                '2025-01-06': 'Día de Reyes',
+                '2025-04-18': 'Viernes Santo',
+                '2025-04-20': 'Domingo de Resurrección',
+                '2025-05-01': 'Día del Trabajo',
+                '2025-08-15': 'Asunción de la Virgen',
+                '2025-10-12': 'Día de la Hispanidad',
+                '2025-11-01': 'Día de Todos los Santos',
+                '2025-12-06': 'Día de la Constitución Española',
+                '2025-12-08': 'Inmaculada Concepción',
+                '2025-12-25': 'Navidad'
+            };
+
+            const holidayName = holidays[dateKey];
+
+            if (holidayName) {
+                alert(`Eventos para ${formattedDate}:\n${holidayName} (Día Feriado)`);
+            } else {
+                alert(`No hay eventos programados para ${formattedDate}`);
+            }
+        }
+
+        function getEventsForDate(date) {
+            // This function is still here but `showEventsForDate` now handles holidays directly for the alert.
+            // Keeping it for potential future general event logic.
+            const events = {
+                '2024-01-01': ['Celebración de Año Nuevo'],
+                '2024-02-14': ['Fiesta del Día de San Valentín'],
+            };
+
+            const dateKey = date.toISOString().split('T')[0];
+            return events[dateKey] || [];
+        }
+
+    </script>
+
+    <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué día es hoy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puede consultar fácilmente la parte superior de nuestra página de inicio para saber 'qué día de la
+                        semana es hoy'. Nuestra configuración avanzada muestra esta información de forma clara para
+                        mantenerlo informado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué fecha es hoy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La fecha que estás buscando se muestra en la página principal, por lo que nunca tendrás que
+                        preguntarte '¿qué día de la semana es hoy?'"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué año estamos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes ver fácilmente la fecha del año actual que se muestra de forma destacada en nuestro sitio para
+                        un fácil acceso cuando quieras abrirlo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo saber qué día de la semana es?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Con nuestra página de inicio avanzada, puede averiguar fácilmente 'qué día es hoy' sin ningún
+                        problema."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo sé si hoy es fin de semana o día laborable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es sencillo, creamos uno claro que indica si hoy es fin de semana o día de semana, para que puedas
+                        planificar en consecuencia."
+          }
+        }
+      ]
+    }
+    </script>
+
+</body>
+
+</html>
